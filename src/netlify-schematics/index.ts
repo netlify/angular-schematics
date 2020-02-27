@@ -1,10 +1,16 @@
-import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree } from "@angular-devkit/schematics";
 
-
-// You don't have to export the function as default. You can also have more than one rule factory
-// per file.
 export function netlifySchematics(_options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
+    const configData = {
+      apiId: "",
+      accessToken: "",
+      projectName: "",
+      publish: "",
+      command: ""
+    };
+
+    tree.create("/netlify.json", JSON.stringify(configData, null, 2));
     return tree;
   };
 }
