@@ -5,30 +5,30 @@
   "type": "object",
   "description": "Creates a Netlify config file and gitignores it 🔒",
   "properties": {
-    "apiId": {
+    "command": {
       "type": "string",
-      "description": "Netlify user API ID.",
-      "x-prompt": "What is your Netlify 📟 API ID?"
-    },
-    "accessToken": {
-      "type": "string",
-      "description": "Netlify user Person Access Token.",
-      "x-prompt": "What is your Netlify 🔑 Personal Access Token?"
-    },
-    "projectName": {
-      "type": "string",
-      "description": "Netlify project name.",
-      "x-prompt": "What is your 📝 project name?"
+      "description": "Default build command.",
+      "x-prompt": "What is 🧱 your project's build command? (maybe `ng build --prod`)"
     },
     "publish": {
       "type": "string",
       "description": "The project directory.",
       "x-prompt": "What 🗂 directory holds you built project? (maybe `dist/project-name`)"
     },
-    "command": {
+    "apiId": {
       "type": "string",
-      "description": "Default build command.",
-      "x-prompt": "What is 🧱 your project's build command? (maybe `ng build --prod`)"
+      "description": "Netlify user API ID.",
+      "x-prompt": "What is your Netlify 📟  API ID?"
+    },
+    "accessToken": {
+      "type": "string",
+      "description": "Netlify user Person Access Token.",
+      "x-prompt": "What is your Netlify 🔑  Personal Access Token?"
+    },
+    "projectName": {
+      "type": "string",
+      "description": "Netlify project name.",
+      "x-prompt": "What is your 📝  project name?"
     }
   },
   "required": ["publish", "command"]

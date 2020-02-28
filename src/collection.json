@@ -3,7 +3,8 @@
   "schematics": {
     "ng-add": {
       "description": "An ✨ awesome Netlify addition to your 💯 NG project.",
-      "factory": "./netlify-schematics/index#netlifySchematics"
+      "factory": "./netlify-schematics/index#netlifySchematics",
+      "schema": "./netlify-schematics/schema.json"
     }
   }
 }

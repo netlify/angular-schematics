@@ -8,19 +8,20 @@ describe("ng-add", () => {
   it("creates config file", () => {
     const runner = new SchematicTestRunner("schematics", collectionPath);
     const options = {
+      publish: "publish",
+      command: "command",
       apiId: "apiId",
       accessToken: "accessToken",
-      projectName: "projectName",
-      publish: "publish",
-      command: "command"
+      projectName: "projectName"
     };
     const tree = runner.runSchematic("ng-add", options, Tree.empty());
-    const content = tree.readContent("/netlify.json");
+    const netlifyConfig = tree.readContent("/netlify.json");
+    const privateConfig = tree.readContent("/netlifyConfig.json");
 
-    expect(content).toContain('apiId": "apiId"');
-    expect(content).toContain('accessToken": "accessToken"');
-    expect(content).toContain('projectName": "projectName"');
-    expect(content).toContain('publish": "publish"');
-    expect(content).toContain('command": "command"');
+    expect(netlifyConfig).toContain('publish": "publish"');
+    expect(netlifyConfig).toContain('command": "command"');
+    expect(privateConfig).toContain('apiId": "apiId"');
+    expect(privateConfig).toContain('accessToken": "accessToken"');
+    expect(privateConfig).toContain('projectName": "projectName"');
   });
 });
