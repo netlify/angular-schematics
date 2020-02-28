@@ -30,6 +30,5 @@
       "description": "Netlify project name.",
       "x-prompt": "What is your 📝  project name?"
     }
-  },
-  "required": ["publish", "command"]
+  }
 }
