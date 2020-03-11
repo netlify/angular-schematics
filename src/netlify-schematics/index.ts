@@ -2,7 +2,6 @@ import { Rule, SchematicContext, Tree } from "@angular-devkit/schematics";
 
 export function netlifySchematics(options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const newGitIgnoreContent = "netlifyConfig.json";
     const netlifyConfigData = {
       build: {
         publish: options.publish,
@@ -29,7 +28,7 @@ export function netlifySchematics(options: any): Rule {
         tree.overwrite("/.gitignore", gitIgnoreContent);
       }
     } else {
-      tree.create("/.gitignore", newGitIgnoreContent);
+      tree.create("/.gitignore", "netlifyConfig.json");
     }
     return tree;
   };
