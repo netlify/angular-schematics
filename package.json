@@ -1,6 +1,6 @@
 {
   "name": "netlify-schematics",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -9,7 +9,7 @@
   "keywords": [
     "schematics"
   ],
-  "author": "",
+  "author": "Tara Z. Manicsic <tzmanics@gmail.com> (https://tzmanics.com)",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
@@ -19,5 +19,15 @@
     "@types/node": "^8.0.31",
     "jasmine": "^3.3.1",
     "typescript": "~3.5.3"
-  }
+  },
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tzmanics/netlify-schematics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tzmanics/netlify-schematics/issues"
+  },
+  "homepage": "https://github.com/tzmanics/netlify-schematics#readme"
 }
