@@ -3,7 +3,7 @@
   "id": "NetlifySchematicsNgAdd",
   "title": "ng add schematic",
   "type": "object",
-  "description": "Creates a Netlify config file and gitignores it 🔒",
+  "description": "Creates Netlify config files and edits the gitignore file 🔒",
   "properties": {
     "command": {
       "type": "string",
@@ -13,7 +13,7 @@
     "publish": {
       "type": "string",
       "description": "The project directory.",
-      "x-prompt": "What 🗂 directory holds you built project? (maybe `dist/project-name`)"
+      "x-prompt": "What 🗂  directory holds your built project? (maybe `dist/project-name`)"
     },
     "apiId": {
       "type": "string",

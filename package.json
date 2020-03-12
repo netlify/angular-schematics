@@ -1,7 +1,7 @@
 {
   "name": "netlify-schematics",
   "version": "1.0.0",
-  "description": "A blank schematics",
+  "description": "Netlify Schematics just for you 💙",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine src/**/*_spec.js"
