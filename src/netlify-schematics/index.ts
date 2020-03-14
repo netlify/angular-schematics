@@ -20,14 +20,15 @@ export function netlifySchematics(options: any): Rule {
       JSON.stringify(privateNetlifyConfigData, null, 2)
     );
 
-    if (tree.exists("/.gitignore")) {
-      let gitIgnoreBuffer = tree.read("/.gitignore");
-      if (gitIgnoreBuffer != null) {
-        let newGitIgnore = `${gitIgnoreBuffer.toString()}\nnetlifyConfig.json`;
-        tree.overwrite("/.gitignore", newGitIgnore);
-      }
-    } else {
+    if (!tree.exists("/.gitignore")) {
       tree.create("/.gitignore", "netlifyConfig.json");
+      return tree;
+    }
+
+    let gitIgnoreBuffer = tree.read("/.gitignore");
+    if (gitIgnoreBuffer != null) {
+      let newGitIgnore = `${gitIgnoreBuffer.toString()}\nnetlifyConfig.json`;
+      tree.overwrite("/.gitignore", newGitIgnore);
     }
     return tree;
   };
