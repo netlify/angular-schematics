@@ -23,9 +23,8 @@ export function netlifySchematics(options: any): Rule {
     if (tree.exists("/.gitignore")) {
       let gitIgnoreBuffer = tree.read("/.gitignore");
       if (gitIgnoreBuffer != null) {
-        let gitIgnoreContent = gitIgnoreBuffer.toString();
-        gitIgnoreContent = `${gitIgnoreContent}\nnetlifyConfig.json`;
-        tree.overwrite("/.gitignore", gitIgnoreContent);
+        let newGitIgnore = `${gitIgnoreBuffer.toString()}\nnetlifyConfig.json`;
+        tree.overwrite("/.gitignore", newGitIgnore);
       }
     } else {
       tree.create("/.gitignore", "netlifyConfig.json");
