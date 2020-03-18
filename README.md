@@ -2,6 +2,12 @@
 
 This project exists to help you integrate Netlify into your Angular project and make your development process a little bit easier ♥.
 
+This is discussed in-depth in a series of blog posts on Netlify's Blog:
+
+- [How To Use Netlify's Schematics for Angular - Part 1 - Creating Netlify Schematics](https://www.netlify.com/blog/2020/03/15/creating-netlifys-schematics-for-angular/)
+- [How To Use Netlify's Schematics for Angular - Part 2 - Creating and Editing Files](https://www.netlify.com/blog/2020/03/18/creating-and-editing-files-with-angular-schematics/)
+- How To Use Netlify's Schematics for Angular - Part 3 - Testing and Publishing Angular Schematics (coming soon)
+
 ## What These Schematics (currently) Do
 
 For now, this schematic will generate a [Netlify configuration file](https://docs.netlify.com/configure-builds/file-based-configuration/?utm_source=project-repo&utm_medium=netlify-schematics_tzm&utm_campaign=devex) (`netlify.json`) that will help aid in the deployment process and help you skip a few inputs if you're using the [Netlify CLI](https://docs.netlify.com/cli/get-started/?utm_source=project-repo&utm_medium=netlify-schematics_tzm&utm_campaign=devex). It will also create a file of private Netlify configuration information (`netlifyConfig.json`) to aid in connecting to the API (we're not using this quite yet and it may be wiped from this schematic in later versions). Since, this information private, these schematics add this file to your `.gitignore` file or create a `.gitignore` file listing this file so it never sees the light of (public) day.
