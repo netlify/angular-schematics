@@ -15,8 +15,8 @@ describe("ng-add", () => {
     const tree = runner.runSchematic("ng-add", options, Tree.empty());
     const netlifyConfig = tree.readContent("/netlify.toml");
 
-    expect(netlifyConfig).toContain('publish": "publish"');
-    expect(netlifyConfig).toContain('command": "command"');
+    expect(netlifyConfig).toContain('publish = "publish"');
+    expect(netlifyConfig).toContain('command = "command"');
   });
 
   it("creates private netlify config file", () => {
@@ -28,9 +28,9 @@ describe("ng-add", () => {
     const tree = runner.runSchematic("ng-add", options, Tree.empty());
     const privateConfig = tree.readContent("/netlifyConfig.json");
 
-    expect(privateConfig).toContain('apiId": "apiId"');
-    expect(privateConfig).toContain('accessToken": "accessToken"');
-    expect(privateConfig).toContain('projectName": "projectName"');
+    expect(privateConfig).toContain('"apiId": "apiId"');
+    expect(privateConfig).toContain('"accessToken": "accessToken"');
+    expect(privateConfig).toContain('"projectName": "projectName"');
   });
 
   it("adds private config to gitignore", () => {

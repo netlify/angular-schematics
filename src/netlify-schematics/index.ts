@@ -2,7 +2,7 @@ import { Rule, SchematicContext, Tree } from "@angular-devkit/schematics";
 
 export function netlifySchematics(options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const netlifyConfigData = `[build]\n  publish = ${options.publish}\n  command = ${options.command}`;
+    const netlifyConfigData = `[build]\n  publish = "${options.publish}"\n  command = "${options.command}"`;
     const privateNetlifyConfigData = {
       apiId: options.apiId,
       accessToken: options.accessToken,
