@@ -13,7 +13,7 @@ describe("ng-add", () => {
       command: "command"
     };
     const tree = runner.runSchematic("ng-add", options, Tree.empty());
-    const netlifyConfig = tree.readContent("/netlify.json");
+    const netlifyConfig = tree.readContent("/netlify.toml");
 
     expect(netlifyConfig).toContain('publish": "publish"');
     expect(netlifyConfig).toContain('command": "command"');
