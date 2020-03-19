@@ -28,7 +28,7 @@ You'll be prompted to add a few bits of information:
 
 - project name: the name of your project
 
-![netlify schematics output](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1583894447/Screen_Shot_2020-03-10_at_10.23.48_AM_oqo3qs.jpg)
+![netlify schematics output](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1584591508/Screen_Shot_2020-03-19_at_12.16.51_AM_gztmit.jpg)
 
 > Note: none of these properties are required if you do not add them the two files will still be generated, but they will have blank spots where your answers would be.
 
