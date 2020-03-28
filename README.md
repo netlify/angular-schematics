@@ -1,4 +1,4 @@
-# Netlify Schematics for Angular
+# 💙 Netlify Schematics for Angular ✨
 
 This project exists to help you integrate Netlify into your Angular project and make your development process a little bit easier ♥.
 
