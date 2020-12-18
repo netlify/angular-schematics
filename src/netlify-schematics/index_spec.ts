@@ -5,17 +5,18 @@ import * as path from "path";
 const collectionPath = path.join(__dirname, "../collection.json");
 
 describe("ng-add", () => {
-  const runner = new SchematicTestRunner("schematics", collectionPath);
-
-  it("creates netlify config file", () => {
+  it("creates netlify config file", async () => {
+    const runner = new SchematicTestRunner("schematics", collectionPath);
     const options = {
       publish: "publish",
       command: "command",
     };
-    const tree = runner.runSchematic("ng-add", options, Tree.empty());
+    const tree = await runner
+      .runSchematicAsync("ng-add", options, Tree.empty())
+      .toPromise();
     const netlifyConfig = tree.readContent("/netlify.toml");
 
     expect(netlifyConfig).toContain('publish = "publish"');
     expect(netlifyConfig).toContain('command = "command"');
   });
-  
+});
