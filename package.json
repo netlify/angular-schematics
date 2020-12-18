@@ -1,6 +1,6 @@
 {
   "name": "netlify-schematics",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Netlify Schematics just for you 💙",
   "scripts": {
     "build": "tsc -p tsconfig.json",
