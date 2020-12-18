@@ -19,8 +19,6 @@ You'll be prompted to add a few bits of information:
 - [project's build command](https://docs.netlify.com/configure-builds/get-started/#definitions?utm_source=project-repo&utm_medium=netlify-schematics_tzm&utm_campaign=devex): for Angular projects this is usually `ng build` or for production `ng build --prod`.
 - [directory of your build project](https://docs.netlify.com/configure-builds/get-started/#definitions?utm_source=project-repo&utm_medium=netlify-schematics_tzm&utm_campaign=devex): when you run your build command where does the built project live (for Angular it's `/dist/<project name>` for Angular + [Scully](https://github.com/scullyio/scully/blob/master/README.md) prerender it's `dist/static`)
 
-![netlify schematics output](https://res.cloudinary.com/dzkoxrsdj/image/upload/v1584591508/Screen_Shot_2020-03-19_at_12.16.51_AM_gztmit.jpg)
-
 > 📝 Note: none of these properties are required if you do not add them the two files will still be generated, but they will have blank spots where your answers would be.
 
 ## Cool, cool, cool?
