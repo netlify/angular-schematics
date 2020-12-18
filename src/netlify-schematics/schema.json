@@ -14,21 +14,6 @@
       "type": "string",
       "description": "The project directory.",
       "x-prompt": "What 🗂  directory holds your built project? (maybe `dist/project-name`)"
-    },
-    "apiId": {
-      "type": "string",
-      "description": "Netlify user API ID.",
-      "x-prompt": "What is your Netlify 📟  API ID?"
-    },
-    "accessToken": {
-      "type": "string",
-      "description": "Netlify user Person Access Token.",
-      "x-prompt": "What is your Netlify 🔑  Personal Access Token?"
-    },
-    "projectName": {
-      "type": "string",
-      "description": "Netlify project name.",
-      "x-prompt": "What is your 📝  project name?"
     }
   }
 }
