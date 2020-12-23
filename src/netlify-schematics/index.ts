@@ -8,11 +8,31 @@ export function netlifySchematics(options: any): Rule {
     if (!tree.exists('/netlify.toml')) {
       tree.create('/netlify.toml', netlifyConfigData);
       console.log(
-        chalk.green('The netlify.toml config file has been created ＿〆(´∀｀●)')
+        chalk.green(
+          'A new netlify.toml config file has been created ＿〆(´∀｀●)'
+        )
       );
       return tree;
     }
 
-    console.log(chalk.bgRed('（ﾉ´д｀）A netlify.toml already exists.'));
+    if (options.tomlExists === 'amend') {
+      let tomlBuffer = tree.read('netlify.toml');
+      if (tomlBuffer !== null) {
+        let newToml = `${tomlBuffer.toString()}\n${netlifyConfigData}`;
+        tree.overwrite('netlify.toml', newToml);
+        console.log(
+          chalk.green('Your netlify.toml has been amended ＿〆(´∀｀●)')
+        );
+      }
+      return tree;
+    }
+
+    if (options.tomlExists === 'overwrite') {
+      tree.overwrite('netlify.toml', netlifyConfigData);
+      console.log(
+        chalk.green('Your netlify.toml has been overwritten ＿〆(´∀｀●)')
+      );
+      return tree;
+    }
   };
 }

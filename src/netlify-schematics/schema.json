@@ -14,6 +14,12 @@
       "type": "string",
       "description": "The project directory.",
       "x-prompt": "What 🗂  directory holds your built project? (maybe `dist/project-name`)"
+    },
+    "tomlExists": {
+      "enum": ["amend", "overwrite"],
+      "description": "Amend or overwrite existing netlify.toml file",
+      "default": "amend",
+      "x-prompt": "If a netlify.toml file exists would you like to amend or overwrite?"
     }
   }
 }
