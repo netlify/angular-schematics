@@ -13,7 +13,7 @@
     },
     "publish": {
       "type": "string",
-      "default": "dist/project-name",
+      "default": "dist/your-project-name",
       "description": "The project directory.",
       "x-prompt": "What 🗂  directory holds your built project?"
     },

@@ -8,7 +8,9 @@ export function netlifySchematics(options: any): Rule {
 
     console.log(
       chalk.yellow(
-        '\n(。･∀･)ﾉ゛If you do not currently have a Netlify account, please head to https://app.netlify.com/signup before running the netlify-schematics (´∀｀)♡.\n'
+        `\n(。･∀･)ﾉ゛Before running this schematic please make sure you have a
+         Netlify account (https://app.netlify.com/signup) & have the Netlify
+         CLI installed globally (npm i netlify-cli -g). Thank you! (´∀｀)♡.\n`
       )
     );
 
