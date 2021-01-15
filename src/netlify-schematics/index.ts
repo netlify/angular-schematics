@@ -2,9 +2,10 @@ import { Rule, SchematicContext, Tree } from '@angular-devkit/schematics';
 
 export function netlifySchematics(options: any): Rule {
   return (tree: Tree, _context: SchematicContext) => {
-    const netlifyConfigData = `[build]\n  publish = "${options.publish}"\n command = "${options.command}"\n[[redirects]]\n from="/*"\n  to="/index.html"\n  status=200`;
     const chalk = require('chalk');
     const execa = require('execa');
+
+    const netlifyConfigData = `[build]\n  publish = "${options.publish}"\n command = "${options.command}"\n[[redirects]]\n from="/*"\n  to="/index.html"\n  status=200`;
 
     console.log(
       chalk.yellow(

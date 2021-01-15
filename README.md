@@ -6,7 +6,7 @@ This project exists to help you integrate Netlify into your Angular project and 
 
 1. Sign up for a Netlify account if you don't have one already: [https://app.netlify.com/signup](https://app.netlify.com/signup)
 
-2. Install the Netlicy CLI globally:
+2. Install the Netlify CLI globally:
    `npm install netlify-cli -g`
 
 ## What These Schematics (currently) Do
