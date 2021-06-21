@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "NetlifySchematicsNgAddNetlifyServerless",
+  "title": "ng add schematic for ssr",
+  "type": "object",
+  "description": "Adds all files for deploy SSR to Netlify.",
+  "properties": {
+  }
+}
