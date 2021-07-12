@@ -23,5 +23,5 @@ ng add netlify-schematics
 Then run:
 
 ```bash
-ng generate netlify-schematics:angular-serverless
+ng generate netlify-schematics:netlify-serverless
 ```

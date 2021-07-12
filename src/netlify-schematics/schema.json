@@ -3,25 +3,6 @@
   "id": "NetlifySchematicsNgAdd",
   "title": "ng add schematic",
   "type": "object",
-  "description": "Creates Netlify config files and edits the gitignore file 🔒",
-  "properties": {
-    "command": {
-      "type": "string",
-      "default": "ng build --prod",
-      "description": "Default build command.",
-      "x-prompt": "What is 🧱 your project's build command?"
-    },
-    "publish": {
-      "type": "string",
-      "default": "dist/your-project-name",
-      "description": "The project directory.",
-      "x-prompt": "What 🗂  directory holds your built project?"
-    },
-    "tomlExists": {
-      "enum": ["amend", "overwrite"],
-      "default": "amend",
-      "description": "Amend or overwrite existing netlify.toml file",
-      "x-prompt": "If a netlify.toml file exists would you like to amend or overwrite?"
-    }
-  }
+  "description": "Sets up collection of schematics for Angular on Netlify",
+  "properties": {}
 }

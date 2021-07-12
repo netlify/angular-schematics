@@ -1,0 +1,8 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "NetlifySeverlessNgGenerate",
+  "title": "ng generate netlify-serverless",
+  "type": "object",
+  "description": "Creates necessary files and adjustments for Netlify serverless deploys",
+  "properties": {}
+}

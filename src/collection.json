@@ -5,6 +5,11 @@
       "description": "An ✨ awesome Netlify addition to your 💯 NG project.",
       "factory": "./netlify-schematics/index#netlifySchematics",
       "schema": "./netlify-schematics/schema.json"
+    },
+    "netlify-serverless": {
+      "description": "Empower Angular Universal sites to run serverlessly on Netlify",
+      "factory": "./netlify-serverless/index#netlifyServerless",
+      "schema": "./netlify-serverless/schema.json"
     }
   }
 }
